@@ -17,6 +17,7 @@ func main() {
 }
 
 // send
+// foo takes a send-only channel because we can convert a regular channel into a send-only, and for all of its indended purposes foo is only going send value to the channel
 func foo(c chan<- int) {
 	for i := 0; i < 100; i++ {
 		c <- i
